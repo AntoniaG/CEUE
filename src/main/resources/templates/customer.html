@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Configurator Log In</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Enter your details</h1>
+<form action="#" th:action="@{/customer}" th:object="${customer}" method="post">
+    <p>First Name: <input type="text" th:field="*{f}" /></p>
+    <p>Last Name: <input type="text" th:field="*{l}" /></p>
+    <p><input type="submit" value="Submit" /> </p>
+</form>
+</body>
+</html>
