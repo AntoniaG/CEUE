@@ -22,3 +22,7 @@ public class Customer {
     }
 
 }
+
+/*
+Websites: https://www.maripavi.at/swagger-ui/index.html#/produkt45controller
+ */
