@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Configurator Log In</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Your details</h1>
+
+    <p th:text="'First Name: ' + ${customer.f}" /> <!-- customer Attribut -->
+    <p th:text="'Last Name: ' + ${customer.l}" />
+
+<a href="#"th:href="@{/handlebar}">
+    <button>Continue to Configurator</button>
+</a>
+
+
+</body>
+</html>
+
+<!--
+<a href="#"th:href="@{/handlebar.html}">
+    <button>Continue to Configurator</button>
+</a>
+
+-->
