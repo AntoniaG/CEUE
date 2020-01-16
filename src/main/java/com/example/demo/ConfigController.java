@@ -11,13 +11,43 @@ import org.springframework.web.client.RestTemplate;
 public class ConfigController {
 
     @GetMapping ("/handlebar")
-    public String config(Model model){
-        System.out.println("hello world");
+    public String configHB(Model model){
+        //System.out.println("hello world");
         RestTemplate restTemplate = new RestTemplate();
 
         model.addAttribute("hbTypes", restTemplate.getForObject(
                 "https://www.maripavi.at/produkt/lenkertyp", String[].class));
         return "handlebar";
+    }
+
+    @GetMapping ("/material")
+    public String configM(Model model){
+        //System.out.println("hello world");
+        RestTemplate restTemplate = new RestTemplate();
+
+        model.addAttribute("mTypes", restTemplate.getForObject(
+                "https://www.maripavi.at/produkt/material", String[].class));
+        return "material";
+    }
+
+    @GetMapping ("/gear")
+    public String configG(Model model){
+        //System.out.println("hello world");
+        RestTemplate restTemplate = new RestTemplate();
+
+        model.addAttribute("gTypes", restTemplate.getForObject(
+                "https://www.maripavi.at/produkt/schaltung", String[].class));
+        return "gear";
+    }
+
+    @GetMapping ("/handle")
+    public String configH(Model model){
+        //System.out.println("hello world");
+        RestTemplate restTemplate = new RestTemplate();
+
+        model.addAttribute("hTypes", restTemplate.getForObject(
+                "https://www.maripavi.at/produkt/griff", String[].class));
+        return "handle";
     }
 
 

@@ -3,26 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Gear</title>
+    <title>Material</title>
     <!--link rel="" href="./resources/static/CustomerController.java"-->
 </head>
+
 <body>
 <h1>CE UE A4</h1>
 <h5>Gruppe 39: Antonia Grillmair, Christoph Wenna, Crsitian Hummel</h5>
 <h2>Configurator</h2>
+<h3>Choose Material</h3>
 
-<h3>Choose Gear</h3>
+<h5>Available Materials: </h5>
 
-<h5>Available Gears: </h5>
+<li th:each="mType: ${mTypes}">
+    <span th:text = "${mType}"></span>
+</li>
 
 <div>
-    <h5>Chosen Gear: <input type="text" placeholder="Gear"></h5>
+    <h5>Chosen Material: <input type="text" placeholder="Material"></h5>
 </div>
 
 
-<form action="handle.html">
+<a href="#"th:href="@{gear}"> <!-- oder /templates/gear.html-->
     <button>Submit</button>
-</form>
+</a>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Handle</title>
+    <title>Gear</title>
     <!--link rel="" href="./resources/static/CustomerController.java"-->
 </head>
 <body>
@@ -11,18 +11,22 @@
 <h5>Gruppe 39: Antonia Grillmair, Christoph Wenna, Crsitian Hummel</h5>
 <h2>Configurator</h2>
 
-<h3>Choose Handle</h3>
+<h3>Choose Gear</h3>
 
-<h5>Available Handle: </h5>
+<h5>Available Gears: </h5>
+
+<li th:each="gType: ${gTypes}">
+    <span th:text = "${gType}"></span>
+</li>
 
 <div>
-    <h5>Chosen Handle: <input type="text" placeholder="Handle"></h5>
+    <h5>Chosen Gear: <input type="text" placeholder="Gear"></h5>
 </div>
 
 
-<form action="order.html">
+<a href="#"th:href="@{/handle}">
     <button>Submit</button>
-</form>
+</a>
 
 </body>
 </html>

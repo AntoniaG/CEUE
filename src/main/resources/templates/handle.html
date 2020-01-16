@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Material</title>
+    <title>Handle</title>
     <!--link rel="" href="./resources/static/CustomerController.java"-->
 </head>
 <body>
@@ -11,18 +11,22 @@
 <h5>Gruppe 39: Antonia Grillmair, Christoph Wenna, Crsitian Hummel</h5>
 <h2>Configurator</h2>
 
-<h3>Choose Material</h3>
+<h3>Choose Handle</h3>
 
-<h5>Available Materials: </h5>
+<h5>Available Handle: </h5>
+
+<li th:each="hType: ${hTypes}">
+    <span th:text = "${hType}"></span>
+</li>
 
 <div>
-    <h5>Chosen Material: <input type="text" placeholder="Material"></h5>
+    <h5>Chosen Handle: <input type="text" placeholder="Handle"></h5>
 </div>
 
 
-<form action="gear.html">
+<a href="#"th:href="@{/order.html}"> <!-- wien in result damit keinhtml hinten steht-->
     <button>Submit</button>
-</form>
+</a>
 
 </body>
 </html>
